@@ -1,0 +1,381 @@
+<!-- Enhanced professional index.html (RTL Arabic) -->
+<!-- Replace your existing index.html with this file -->
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>مِهنة | Mihna - منصة السير الذاتية الذكية</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="منصة مِهنة - صمّم سيرتك الذاتية واطلع على وظائف متطابقة تلقائياً عبر مطابقة ذكية مع لينكدإن" />
+  <meta property="og:title" content="مِهنة | منصتك للسيرة الذاتية والمطابقة الذكية" />
+  <meta property="og:description" content="صمّم سيرتك الذاتية واصنع فرصتك الوظيفية — مطابقة ذكية وتحليلات مهارات" />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance: preload fonts & preconnect -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <!-- Basic CSP hint (server should send stronger CSP headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:;">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "مِهنة",
+    "url": "https://yourdomain.example",
+    "logo": "https://yourdomain.example/assets/logo.png",
+    "sameAs": ["https://www.linkedin.com/company/your","https://www.instagram.com/your"]
+  }
+  </script>
+
+  <!-- Minimal CSS (scoped & optimized) -->
+  <style>
+    :root{
+      --primary:#0A2463; --accent:#D4AF37; --bg:#FAFAFA; --muted:#718096; --white:#fff;
+      --shadow-sm:0 6px 18px rgba(10,36,99,0.06);
+      --glass: rgba(255,255,255,0.6);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:"Cairo",Inter,system-ui; background:var(--bg); color:#0f1724; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; line-height:1.55; direction:rtl;
+    }
+
+    /* Header */
+    header{
+      position:fixed; top:0; left:0; right:0; z-index:1200;
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+      backdrop-filter: blur(6px);
+      display:flex; align-items:center; justify-content:space-between; gap:1rem;
+      padding: .9rem 4%; box-shadow:var(--shadow-sm);
+    }
+    .logo{display:flex; align-items:center; gap:.6rem}
+    .logo .brand{font-family:"Playfair Display"; font-weight:800; color:var(--primary); font-size:1.6rem}
+    nav ul{list-style:none; display:flex; gap:1.6rem; align-items:center; margin:0; padding:0}
+    nav a{color:inherit; text-decoration:none; font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent),#f7e6a0); color:var(--primary); padding:.6rem 1.1rem; border-radius:999px; font-weight:700; text-decoration:none; box-shadow:0 8px 30px rgba(212,175,55,0.12)}
+
+    /* Hero */
+    .hero{
+      min-height:84vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:120px 6% 60px;
+      background-image:linear-gradient(180deg, rgba(10,36,99,0.85), rgba(30,64,175,0.55)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover; background-position:center; color:var(--white);
+      position:relative;
+    }
+    .hero .container{max-width:980px}
+    .hero h1{font-family:"Playfair Display"; font-size:3rem; margin:0 0 .8rem; line-height:1.05}
+    .hero p{opacity:.92; font-size:1.05rem; margin:0 0 1.5rem}
+
+    /* Stats */
+    .stats{display:flex; gap:2rem; justify-content:center; margin-top:1.6rem; flex-wrap:wrap}
+    .stat{background:rgba(255,255,255,0.06); padding:14px 18px; border-radius:12px}
+    .stat strong{display:block; color:var(--accent); font-size:1.6rem}
+
+    /* Templates grid */
+    .section{padding:4.2rem 6%}
+    .section h2{font-family:"Playfair Display"; color:var(--primary); font-size:2rem; margin-bottom:.6rem}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.6rem}
+    .card{background:var(--white); border-radius:var(--radius); padding:1.2rem; box-shadow:var(--shadow-sm); transition:transform .28s ease, box-shadow .28s ease}
+    .card:hover{transform:translateY(-8px); box-shadow:0 20px 40px rgba(2,6,23,0.08)}
+    .badge{display:inline-block;background:#edf7ed;color:#1b5d3a;padding:.25rem .6rem;border-radius:999px;font-weight:700;font-size:0.85rem}
+
+    /* Job matching visual */
+    .job-matching{background:linear-gradient(90deg,#0a2463,#1e40af); color:var(--white); padding:3.6rem 6%; border-radius:18px}
+    .steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-top:1.6rem}
+
+    /* Footer */
+    footer{background:var(--primary); color:var(--white); padding:2.4rem 6%; margin-top:2rem; border-top-left-radius:18px; border-top-right-radius:18px}
+    .footer-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem}
+    footer a{color:inherit; text-decoration:none; display:block; margin-bottom:.4rem}
+
+    /* Chat-widget trigger */
+    .ai-fab{position:fixed; left:20px; bottom:20px; z-index:1400; width:56px;height:56px;border-radius:999px;background:linear-gradient(90deg,#111827,#0a2463);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(10,36,99,0.3); cursor:pointer; border:none}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* responsive */
+    @media (max-width:768px){
+      .hero h1{font-size:2rem}
+      header{padding:.7rem 4%}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner" aria-label="رأس الموقع">
+    <div class="logo" aria-hidden="false">
+      <span class="brand">مِهنة<span style="color:var(--accent)">.</span></span>
+      <span style="font-size:0.9rem;color:var(--muted);margin-right:.4rem">منصة السير الذاتية الذكية</span>
+    </div>
+
+    <nav role="navigation" aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#templates">القوالب</a></li>
+        <li><a href="#pricing">التسعير</a></li>
+        <li><a href="#job-matching">مطابقة الوظائف</a></li>
+        <li><a href="#about">عنّا</a></li>
+      </ul>
+    </nav>
+
+    <div style="display:flex;gap:1rem;align-items:center">
+      <a class="cta" href="#create">ابدأ رحلتك المهنية</a>
+      <button class="ai-toggle" aria-label="فتح مساعد الموقع" style="background:transparent;border:1px solid rgba(10,36,99,0.06);padding:.5rem .8rem;border-radius:10px;cursor:pointer">مساعد</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="hero" role="region" aria-label="القسم الرئيسي">
+      <div class="container">
+        <h1>لا تبحث عن وظيفة، بل دع الوظائف تبحث عنك</h1>
+        <p>منصة مِهنة تحول سيرتك الذاتية إلى بطاقة عبور لعالم الفرص — مطابقة ذكية وتحليل للمهارات ومقترحات تحسن فرص القبول.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
+          <a class="cta" href="#create">أنشئ سيرتك الذاتية الآن</a>
+          <a href="#templates" style="padding:.6rem 1rem;border-radius:10px;background:rgba(255,255,255,0.12);color:var(--white);text-decoration:none">عرض القوالب</a>
+        </div>
+
+        <div class="stats" role="list" aria-label="إحصائيات">
+          <div class="stat" role="listitem"><strong>+5,000</strong><span style="display:block;color:rgba(255,255,255,0.85)">سيرة ذاتية مُنشأة</span></div>
+          <div class="stat" role="listitem"><strong>87%</strong><span style="display:block;color:rgba(255,255,255,0.85)">نسبة نجاح المقابلات</span></div>
+          <div class="stat" role="listitem"><strong>+2,300</strong><span style="display:block;color:rgba(255,255,255,0.85)">وظيفة متطابقة</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates -->
+    <section id="templates" class="section" aria-labelledby="templates-title">
+      <h2 id="templates-title">قوالب احترافية</h2>
+      <p style="color:var(--muted);max-width:720px">اختر من قوالب مُحسّنة لطباعة PDF، التقديم عبر الإنترنت، أو وضع ملفك على لينكدإن.</p>
+
+      <div class="grid" role="list">
+        <article class="card" role="article" aria-label="قالب كلاسيكي">
+          <span class="badge">مجاني</span>
+          <h3 style="margin-top:.6rem;color:var(--primary)">الكلاسيكي المتميز</h3>
+          <p style="color:var(--muted)">تصميم أنيق مناسب لكل المجالات. يدعم PDF وتحميل الطباعة.</p>
+          <div style="margin-top:1rem"><a class="cta" href="#use-template">استخدم القالب</a></div>
+        </article>
+
+        <article class="card" role="article" aria-label="قالب إبداعي">
+          <span class="badge">مجاني</span>
+          <h3 style="margin-top:.6rem;color:var(--primary)">الإبداعي الحديث</h3>
+          <p style="color:var(--muted)">مثالي للمصممين والمبدعين مع أقسام لعرض الأعمال.</p>
+          <div style="margin-top:1rem"><a class="cta" href="#use-template">استخدم القالب</a></div>
+        </article>
+
+        <article class="card" role="article" aria-label="قالب تنفيذي">
+          <span class="badge" style="background:#f0e6d2;color:#0a2463">مميز</span>
+          <h3 style="margin-top:.6rem;color:var(--primary)">التنفيذي الفاخر</h3>
+          <p style="color:var(--muted)">مناسب للقادة مع قسم للإنجازات والمؤشرات القيادية.</p>
+          <div style="margin-top:1rem"><a class="cta" href="#pricing">الترقية</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Job matching -->
+    <section id="job-matching" class="section">
+      <div class="job-matching" role="region" aria-label="مطابقة الذكية">
+        <h2 style="margin:0">مطابقة ذكية مع وظائف لينكدإن</h2>
+        <p style="opacity:.9">نظام يقرأ سيرتك الذاتية ويقارنها بملايين الإعلانات لاستخراج الوظائف الأكثر توافقًا.</p>
+
+        <div class="steps">
+          <div class="card" style="background:rgba(255,255,255,0.06)"><strong>1</strong><div>أنشئ سيرتك</div></div>
+          <div class="card" style="background:rgba(255,255,255,0.06)"><strong>2</strong><div>تحليل المهارات</div></div>
+          <div class="card" style="background:rgba(255,255,255,0.06)"><strong>3</strong><div>مطابقة ذكية</div></div>
+          <div class="card" style="background:rgba(255,255,255,0.06)"><strong>4</strong><div>التقديم بثقة</div></div>
+        </div>
+
+        <div style="margin-top:1.2rem">
+          <a class="cta" href="https://www.linkedin.com/jobs/" target="_blank" rel="noopener">ابحث على لينكدإن</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (simple) -->
+    <section class="section" aria-labelledby="testimonies">
+      <h2 id="testimonies">آراء المستخدمين</h2>
+      <p style="color:var(--muted)">آلاف من المستخدمين حسّنوا فرصهم بفضل مِهنة.</p>
+      <div class="grid">
+        <div class="card">"حصلت على عرض خلال أسبوع" — أحمد، مدير تسويق</div>
+        <div class="card">"مطابقة ممتازة" — فاطمة، مطورة</div>
+        <div class="card">"سيرة احترافية فعلا" — محمد، مهندس</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <strong>مِهنة</strong>
+        <p style="color:rgba(255,255,255,0.8)">منصة تصميم السير الذاتية والمطابقة الذكية.</p>
+      </div>
+      <div>
+        <strong>روابط</strong>
+        <a href="#home">الرئيسية</a>
+        <a href="#templates">القوالب</a>
+        <a href="#pricing">التسعير</a>
+      </div>
+      <div>
+        <strong>الدعم</strong>
+        <a href="#">الأسئلة الشائعة</a>
+        <a href="#">سياسة الخصوصية</a>
+      </div>
+      <div>
+        <strong>اتصل</strong>
+        <div style="margin-top:.4rem">info@mihna.com</div>
+        <div style="margin-top:.2rem">+964 770 123 4567</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1rem;opacity:.9">© <span id="year"></span> مِهنة. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <!-- AI Chat Widget Trigger -->
+  <button id="openChat" class="ai-fab" aria-label="فتح مساعد مِهنة">🤖</button>
+
+  <!-- Chat Widget (hidden panel) -->
+  <div id="chatPanel" role="dialog" aria-label="مساعد مِهنة" style="position:fixed;left:20px;bottom:90px;width:360px;max-width:92vw;z-index:1500;background:var(--white);box-shadow:0 20px 60px rgba(2,6,23,0.12);border-radius:12px;overflow:hidden;display:none;flex-direction:column;">
+    <div style="padding:12px 14px;border-bottom:1px solid #f1f1f1;display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div style="font-weight:700;color:var(--primary)">مساعد مِهنة</div>
+        <div style="font-size:12px;color:var(--muted)">اسألني عن القوالب، التطوير المهني أو التقديم للوظائف</div>
+      </div>
+      <button id="closeChat" aria-label="إغلاق" style="background:transparent;border:none;font-size:18px;cursor:pointer">✖</button>
+    </div>
+
+    <div id="chatMessages" style="padding:12px;display:flex;flex-direction:column;gap:8px;max-height:300px;overflow:auto;background:linear-gradient(180deg,#fff,#fafafa);">
+      <!-- messages appear here -->
+    </div>
+
+    <form id="chatForm" style="display:flex;gap:8px;padding:12px;border-top:1px solid #f1f1f1">
+      <input id="chatInput" aria-label="اكتب سؤالك" placeholder="اكتب سؤالك..." style="flex:1;padding:.6rem;border-radius:8px;border:1px solid #e6eaf0" />
+      <button type="submit" aria-label="إرسال" style="background:var(--primary);color:#fff;padding:.55rem .8rem;border-radius:8px;border:none;cursor:pointer">إرسال</button>
+    </form>
+  </div>
+
+  <!-- Scripts: small, unobtrusive -->
+  <script>
+    // basic runtime improvements
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // header shrink on scroll
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) header.style.boxShadow = '0 12px 30px rgba(2,6,23,0.08)';
+      else header.style.boxShadow = '';
+    });
+
+    // Chat widget behavior
+    const openBtn = document.getElementById('openChat');
+    const closeBtn = document.getElementById('closeChat');
+    const panel = document.getElementById('chatPanel');
+    const form = document.getElementById('chatForm');
+    const messagesEl = document.getElementById('chatMessages');
+    const input = document.getElementById('chatInput');
+
+    function appendMessage(role, text) {
+      const el = document.createElement('div');
+      el.style.padding = '8px 10px';
+      el.style.borderRadius = '10px';
+      el.style.maxWidth = '85%';
+      el.style.alignSelf = (role === 'user') ? 'flex-start' : 'flex-end';
+      el.style.background = (role === 'user') ? '#eef2ff' : '#0a2463';
+      el.style.color = (role === 'user') ? '#0a2463' : '#fff';
+      el.style.fontSize = '14px';
+      el.textContent = text;
+      messagesEl.appendChild(el);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    openBtn.addEventListener('click', () => {
+      panel.style.display = 'flex';
+      input.focus();
+    });
+    closeBtn.addEventListener('click', () => panel.style.display = 'none');
+
+    // Chat form: calls /api/chat (you must implement this endpoint on server)
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+      appendMessage('user', text);
+      input.value = '';
+      // optimistic assistant placeholder
+      const placeholderId = 'p-'+Date.now();
+      appendMessage('assistant', 'جاري المعالجة…');
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type':'application/json' },
+          body: JSON.stringify({ messages: [{ role:'user', content:text }] })
+        });
+
+        // support both streaming and JSON reply
+        const ctype = res.headers.get('content-type') || '';
+        let assistantText = '';
+
+        if (ctype.includes('text/event-stream') && res.body) {
+          // streaming: accumulate chunks
+          const reader = res.body.getReader();
+          const dec = new TextDecoder();
+          while (true) {
+            const { value, done } = await reader.read();
+            if (done) break;
+            assistantText += dec.decode(value, { stream: true });
+            // update last assistant message
+            const last = messagesEl.lastChild;
+            if (last) last.textContent = assistantText;
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+          }
+        } else {
+          const data = await res.json();
+          assistantText = data.reply || data.message || '(لا يوجد رد)';
+          // replace last assistant placeholder
+          const last = messagesEl.lastChild;
+          if (last) last.textContent = assistantText;
+        }
+      } catch (err) {
+        const last = messagesEl.lastChild;
+        if (last) last.textContent = 'حصل خطأ في الاتصال. حاول لاحقاً.';
+        console.error(err);
+      }
+    });
+
+    // Keyboard accessibility: open chat with "c" key (if not typing)
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'c' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        panel.style.display = (panel.style.display === 'flex') ? 'none' : 'flex';
+        if (panel.style.display === 'flex') input.focus();
+      }
+    });
+  </script>
+
+  <!-- Notes for backend & deployment (keep in domain README) -->
+  <!--
+    Backend /api/chat endpoint (required):
+    - Implement a POST /api/chat that accepts { messages: [{role,content}, ...] }
+    - The endpoint can:
+      A) Stream text/event-stream chunks (for real-time typing effect)
+      B) Return JSON { reply: "..." }
+    - Recommended server: Node (Next.js App Router or Express) or Python (FastAPI)
+    - Recommended LLM providers: OpenAI (gpt-4o-mini / gpt-4o), Anthropic, or Azure OpenAI
+    - Store API keys in server-side env vars; never expose keys to frontend.
+
+    Example minimal server (Next.js app/api/chat/route.ts) is provided in the development plan.
+  -->
+
+</body>
+</html>
