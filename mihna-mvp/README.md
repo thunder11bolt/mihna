@@ -1,0 +1,1 @@
+"mihna-mvp - Next.js MVP for \"مِهنة\"\n\nHow to run:\n1. unzip and cd into the project\n2. npm install\n3. npm run dev\n4. open http://localhost:3000\n"
